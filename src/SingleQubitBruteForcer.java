@@ -29,33 +29,33 @@ public class SingleQubitBruteForcer {
         Path child = findRoute(depth - 1, cur.H(), target, "H");
         best.best(child);
       }
-      if (pstep.equals("H") || pstep.equals("S")) {
+      if (pstep.equals("H") || pstep.equals("S") || pstep.equals("")) {
         Path child = findRoute(depth - 1, cur.T(), target, "T");
         best.best(child);
       }
-      if (pstep.equals("H") || pstep.equals("s")) {
+      if (pstep.equals("H") || pstep.equals("s") || pstep.equals("")) {
         Path child = findRoute(depth - 1, cur.Tt(), target, "t");
         best.best(child);
       }
       // for blazing-fast (but slightly sub-optimal results)
       // comment out all the options below here
-//      if (pstep.equals("H")) {
+//      if (pstep.equals("H") || pstep.equals("")) {
 //        Path child = findRoute(depth - 1, cur.S(), target, "S");
 //        best.best(child);
 //      }
-//      if (pstep.equals("H")) {
+//      if (pstep.equals("H") || pstep.equals("")) {
 //        Path child = findRoute(depth - 1, cur.St(), target, "s");
 //        best.best(child);
 //      }
-//      if (pstep.equals("H")) {
+//      if (pstep.equals("H") || pstep.equals("")) {
 //        Path child = findRoute(depth - 1, cur.X(), target, "X");
 //        best.best(child);
 //      }
-//      if (!pstep.equals("Y")) {
+//      if (!pstep.equals("Y") || pstep.equals("")) {
 //        Path child = findRoute(depth - 1, cur.Y(), target, "Y");
 //        best.best(child);
 //      }
-//      if (!pstep.equals("Z")) {
+//      if (!pstep.equals("Z") || pstep.equals("")) {
 //        Path child = findRoute(depth - 1, cur.Z(), target, "Z");
 //        best.best(child);
 //      }
