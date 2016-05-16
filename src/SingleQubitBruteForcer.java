@@ -33,7 +33,7 @@ public class SingleQubitBruteForcer {
         Path child = findRoute(depth - 1, cur.T(), target, "T");
         best.best(child);
       }
-      if (pstep.equals("H") || pstep.equals("t")) {
+      if (pstep.equals("H") || pstep.equals("s")) {
         Path child = findRoute(depth - 1, cur.Tt(), target, "t");
         best.best(child);
       }
