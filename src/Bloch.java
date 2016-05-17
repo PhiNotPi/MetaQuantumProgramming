@@ -26,8 +26,8 @@ public class Bloch {
   }
 
   public double dist(Bloch other) {
-    return Math.sqrt(Math.pow(x - other.x, 2) + Math.pow(y - other.y, 2)
-        + Math.pow(z - other.z, 2));
+    return Math.pow(x - other.x, 2) + Math.pow(y - other.y, 2)
+        + Math.pow(z - other.z, 2);
   }
   
   // difference in probability of being true
